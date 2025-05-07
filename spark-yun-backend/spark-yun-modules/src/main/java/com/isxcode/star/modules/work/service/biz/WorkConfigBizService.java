@@ -170,9 +170,14 @@ public class WorkConfigBizService {
             workConfig.setContainerId(wocConfigWorkReq.getContainerId());
         }
 
-        // 设置容器id
+        // 用户更新基线告警
         if (wocConfigWorkReq.getAlarmList() != null) {
             workConfig.setAlarmList(JSON.toJSONString(wocConfigWorkReq.getAlarmList()));
+        }
+
+        // 用户更新自动重试规则
+        if (wocConfigWorkReq.getRetryRule() != null) {
+            workConfig.setRetryRule(JSON.toJSONString(wocConfigWorkReq.getRetryRule()));
         }
 
         // 保存配置

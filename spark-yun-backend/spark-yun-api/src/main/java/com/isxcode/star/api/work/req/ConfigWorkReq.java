@@ -54,4 +54,7 @@ public class ConfigWorkReq {
 
     @Schema(title = "告警")
     private List<String> alarmList;
+
+    @Schema(title = "作业重试规则")
+    private RetryRule retryRule;
 }

@@ -471,6 +471,10 @@ public class WorkBizService {
             getWorkRes.setAlarmList(JSON.parseArray(workConfig.getAlarmList(), String.class));
         }
 
+        if (!Strings.isEmpty(workConfig.getRetryRule())) {
+            getWorkRes.setRetryRule(JSON.parseObject(workConfig.getRetryRule(), RetryRule.class));
+        }
+
         return getWorkRes;
     }
 

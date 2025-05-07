@@ -55,4 +55,7 @@ public class GetWorkRes {
     private String containerId;
 
     private List<String> alarmList;
+
+    @Schema(title = "自动重试规则")
+    private RetryRule retryRule;
 }

@@ -64,6 +64,8 @@ public class WorkConfigEntity {
 
     private String alarmList;
 
+    private String retryRule;
+
     @CreatedDate
     private LocalDateTime createDateTime;
 
